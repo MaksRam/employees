@@ -1,0 +1,28 @@
+{
+  "name": "employees",
+  "version": "1.0.0",
+  "description": "employees repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaksRam/employee.git"
+  },
+  "author": "M R",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaksRam/employee/issues"
+  },
+  "homepage": "https://github.com/MaksRam/employee#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "@koa/router": "^12.0.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0"
+  }
+}
