@@ -4,16 +4,27 @@
   "description": "Reference solution of Employees API",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "db-create": "node lib/db/scripts/create.js",
+    "db-migrate": "node lib/db/scripts/migrate.js",
+    "db-seed": "node lib/db/scripts/seed.js",
+    "db-drop": "node lib/db/scripts/drop.js",
+    "db-setup": "npm run db-create && npm run db-migrate",
+    "db-setup-seed": "npm run db-create && npm run db-migrate && npm run db-seed",
+    "restart": "docker compose build && docker compose up"
   },
-  "author": "Mykhailo Dorokhov",
+  "author": "Maksim Ramazanov",
   "license": "ISC",
   "dependencies": {
+    "@koa-better-modules/joi-router": "^10.1.0",
     "knex": "^2.2.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-joi-router": "^8.0.0",
-    "mysql2": "^2.3.3"
+    "koa-logger": "^3.2.1",
+    "mysql2": "^2.3.3",
+    "redis": "^4.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
